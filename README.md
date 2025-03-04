@@ -1,10 +1,11 @@
 TMS (Train Management System)
 
-Overview
+Overview:
 
 TMS (Train Management System) is a web application for managing train routes, passenger registration, ticket purchases, and travel history. The server is built using Node.js with Express.js and SQLite3 as the database.
 
-Features
+
+Features:
 
 User Management: Registration, login, profile editing, and email verification.
 
@@ -14,7 +15,8 @@ Ticket Purchase: Enables users to buy tickets and stores travel history.
 
 Admin Statistics: Provides data on the most used train routes and ticket types.
 
-Technologies Used
+
+Technologies Used:
 
 Node.js (Express.js framework)
 
@@ -26,15 +28,15 @@ Bcrypt (Password hashing)
 
 Nodemailer (Email verification system)
 
-Installation
 
-Prerequisites
+Prerequisites:
 
 Node.js installed
 
 SQLite3 installed
 
-Setup
+
+Setup:
 
 Clone the repository:
 
@@ -44,9 +46,11 @@ Navigate to the project folder:
 
 cd TMS
 
+
 Install dependencies:
 
 npm install
+
 
 Configure email credentials in server.js:
 
@@ -58,13 +62,15 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+
 Run the server:
 
 node server.js
 
 The server will start on port 3333 by default.
 
-API Endpoints
+
+API Endpoints:
 
 Authentication
 
@@ -94,7 +100,8 @@ Admin Statistics
 
 GET /get_statistics - Retrieve statistics on train usage (admin only)
 
-Security
+
+Security:
 
 Passwords are hashed using bcrypt.
 
