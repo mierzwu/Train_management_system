@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TMS</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles copy.css">
+    <script defer src="../script.js"></script> <!-- Dodanie skryptu JavaScript -->
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="logo-container">
+                <img src="../pictures/logo.png" alt="Logo">
+            </div>
+            <div class="site-name">
+                <h1>Train Management System</h1>
+            </div>
+            <ul class="auth-panel-small">      
+                <!-- The auth panel will be updated by JavaScript -->
+            </ul>
+        </header>
+        
+        <div class="container">
+            <main align="center">
+                <table class="cennik">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>To 20min</th>
+                            <th>20min-40min</th>
+                            <th>Over 40min</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Identity card</td>
+                            <td>4,40zł</td>
+                            <td>5,60zł</td>
+                            <td>13,10zł</td>
+                        </tr>
+                        <tr>
+                            <td>Large family card</td>
+                            <td>2,77zł</td>
+                            <td>3,53zł</td>
+                            <td>8,25zł</td>
+                        </tr>
+                        <tr>
+                            <td>Veteran card</td>
+                            <td>2,16zł</td>
+                            <td>2,74zł</td>
+                            <td>6,42zł</td>
+                        </tr>
+                        <tr>
+                            <td>Lodz resident card</td>
+                            <td>3,65zł</td>
+                            <td>4,65zł</td>
+                            <td>10,87zł</td>
+                        </tr>
+                        <tr>
+                            <td>Senior card</td>
+                            <td>3,08zł</td>
+                            <td>3,92zł</td>
+                            <td>9,17zł</td>
+                        </tr>
+                        <tr>
+                            <td>Soldier card</td>
+                            <td>0,97zł</td>
+                            <td>1,23zł</td>
+                            <td>2,88zł</td>
+                        </tr>
+                        <tr>
+                            <td>Student ID</td>
+                            <td>2,16zł</td>
+                            <td>2,74zł</td>
+                            <td>6,24zł</td>
+                        </tr>
+                        <tr>
+                            <td>School ID</td>
+                            <td>2,77zł</td>
+                            <td>3,53zł</td>
+                            <td>8,25zł</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+            <aside>
+                <ul class="menu">
+                    <li><a href="index.html">Search route</a></li>
+                    <li><a href="pricelist.html">Pricelist</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <div class="copyright">
+                © 2024 Train Management System. All rights reserved.
+            </div>
+            <div class="date-time">
+                <p id="currentDate"></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            const authPanel = document.querySelector('.auth-panel-small');
+            if (token) {
+                authPanel.innerHTML = `
+                    <li><a href="profile.html" class="profile-link">Profile</a></li>
+                    <li><a href="#" class="logout-link">Logout</a></li>
+                `;
+
+                document.querySelector('.logout-link').addEventListener('click', () => {
+                    localStorage.removeItem('token');
+                    window.location.href = "index.html";
+                });
+            } else {
+                authPanel.innerHTML = `
+                    <li><a href="login.html" class="login-link">Login</a></li>
+                    <li><a href="register.html" class="register-link">Register</a></li>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

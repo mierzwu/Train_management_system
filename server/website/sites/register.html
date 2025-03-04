@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TMS</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles copy.css">
+    <script defer src="../scripts/register.js"></script> <!-- Dodanie skryptu JavaScript -->
+
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="logo-container">
+                <img src="../pictures/logo.png" alt="Logo">
+            </div>
+            <div class="site-name">
+                <h1>Train Menegement System</h1>
+            </div>
+			<ul class="auth-panel-small">      
+                <li><a href="login.html" class="login-link">Login</a></li>
+                <li><a href="register.html
+                    " class="register-link">Register</a></li>
+            </ul>
+        </header>
+        
+        <div class="container">
+            <main>
+                <section class="content">
+                  <div class="login-container">
+                    <h2 class="form-heading">Register</h2>
+                    <form id="register_form" action="/register" method="get" onsubmit="handleFormSubmit(event)" class="form-container">
+                        <p>
+                            <label for="Name" class="form-label">First name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required class="form-input"> 
+                        </p>
+                        <p>
+                            <label for="Lname" class="form-label">Last name</label>
+                            <input type="text" id="surname" name="surname" placeholder="Lname" required class="form-input"> 
+                        </p>
+                        <p class="form-label">Your gender</p>
+                        <p>
+                            <input type="radio" name="sex" id="K" value="k" class="form-radio"> Female
+                            <input type="radio" name="sex" id="M" value="M" class="form-radio"> Male
+                        </p>
+                        <p>
+                            <label for="Date" class="form-label">Date of birth:</label>
+                            <input type="Date" id="date_of_birth" name="date_of_birth" required class="form-input">
+                        </p>
+                        <p>
+                            <label for="Email" class="form-label">E-mail</label>
+                            <input type="text" id="email" name="email" placeholder="E-mail" required class="form-input"> 
+                        </p>
+                        <p>
+                            <label for="Phone" class="form-label">Phone number</label>
+                            <input type="text" id="phone_number" name="phone" placeholder="Phone number" required class="form-input"> 
+                        </p>
+                        <p>
+                            <iframe src="../sites/document.html" style="border:none;" class="form-iframe"></iframe>
+                        </p>
+                        <p>
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required class="form-input">
+                        </p>
+                        <p>
+                            <label for="password1" class="form-label">Repeat password</label>
+                            <input type="password" id="password1" name="password1" placeholder="Password" required class="form-input">
+                        </p>
+                        <p>
+                            <button type="submit" class="form-button">Register</button>
+                        </p>
+                    </form>
+                </div>
+                
+                    <div id="responseMessage" style="margin-top: 20px;"></div>
+                </section>
+            </main>
+            <aside>
+                <ul class="menu">
+                  <li><a href="index.html">Search route</a></li>
+                  <li><a href="pricelist.html">Pricelist</a></li>
+                  <li><a href="contact.html">Contakt</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <div class="copyright">
+                © 2024 Train Menegament System. All rights reserved.
+            </div>
+            <div class="date-time">
+                <p id="currentDate"></p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+</body>
+</html>

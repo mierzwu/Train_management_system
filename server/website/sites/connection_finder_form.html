@@ -1,0 +1,169 @@
+<style type="text/css">
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-select,
+.form-time {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.form-select:focus,
+.form-time:focus {
+    border-color: #c0392b;
+    outline: none;
+}
+
+.form-button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #a93226;
+}
+
+.form-select,
+.form-time {
+    font-size: 16px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
+
+</style>
+
+<form id="searchForm" action="/search" method="post" class="form-container">
+    <label for="wybor1" class="form-label">Select station 1:</label>
+    <select id="wybor1" name="from_station" class="form-select">
+        <option value="1">Pabianice</option>
+        <option value="2">Pabianice Polnocne</option>
+        <option value="3">Lodz Lublinek</option>
+        <option value="4">Lodz Retkinia</option>
+        <option value="5">Lodz Kaliska</option>
+        <option value="6">Lodz Pabianicka</option>
+        <option value="7">Lodz Chojny</option>
+        <option value="8">Lodz Olechow Wiadukt</option>
+        <option value="9">Lodz Olechow Zachod</option>
+        <option value="10">Lodz Olechow Wschod</option>
+        <option value="11">Lodz Andrzejow Szosa</option>
+        <option value="12">Lodz Dabrowa</option>
+        <option value="13">Lodz Widzew</option>
+        <option value="14">Lodz Niciarniana</option>
+        <option value="15">Lodz Fabryczna</option>
+        <option value="16">Lodz Stoki</option>
+        <option value="17">Lodz Marysin</option>
+        <option value="18">Lodz Warszawska</option>
+        <option value="19">Lodz Arturowek</option>
+        <option value="20">Lodz Radogoszcz Wschod</option>
+        <option value="21">Lodz Zabieniec</option>
+        <option value="22">Lodz Radogoszcz Zachod</option>
+        <option value="23">Zgierz</option>
+        <option value="24">Zgierz Rudunki</option>
+        <option value="25">Zgierz Jaracza</option>
+        <option value="26">Zgierz Polnoc</option>
+        <option value="27">Zgierz Kontrewers</option>
+    </select>
+
+    <label for="wybor2" class="form-label">Select station 2:</label>
+    <select id="wybor2" name="to_station" class="form-select">
+        <option value="1">Pabianice</option>
+        <option value="2">Pabianice Polnocne</option>
+        <option value="3">Lodz Lublinek</option>
+        <option value="4">Lodz Retkinia</option>
+        <option value="5">Lodz Kaliska</option>
+        <option value="6">Lodz Pabianicka</option>
+        <option value="7">Lodz Chojny</option>
+        <option value="8">Lodz Olechow Wiadukt</option>
+        <option value="9">Lodz Olechow Zachod</option>
+        <option value="10">Lodz Olechow Wschod</option>
+        <option value="11">Lodz Andrzejow Szosa</option>
+        <option value="12">Lodz Dabrowa</option>
+        <option value="13">Lodz Widzew</option>
+        <option value="14">Lodz Niciarniana</option>
+        <option value="15">Lodz Fabryczna</option>
+        <option value="16">Lodz Stoki</option>
+        <option value="17">Lodz Marysin</option>
+        <option value="18">Lodz Warszawska</option>
+        <option value="19">Lodz Arturowek</option>
+        <option value="20">Lodz Radogoszcz Wschod</option>
+        <option value="21">Lodz Zabieniec</option>
+        <option value="22">Lodz Radogoszcz Zachod</option>
+        <option value="23">Zgierz</option>
+        <option value="24">Zgierz Rudunki</option>
+        <option value="25">Zgierz Jaracza</option>
+        <option value="26">Zgierz Polnoc</option>
+        <option value="27">Zgierz Kontrewers</option>
+    </select>
+
+    <label for="czas" class="form-label">Hour:</label>
+    <input type="time" id="czas" name="date" step="60" required class="form-time">
+
+    <button type="submit" class="form-button">Send</button>
+</form>
+
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const from_station = document.getElementById("wybor1").value;
+    const to_station = document.getElementById("wybor2").value;
+    const date = document.getElementById("czas").value;
+    const search_form_data = { from_station, to_station, date };
+
+    // Save data to localStorage
+    localStorage.setItem("searchData", JSON.stringify(search_form_data));
+    console.log("Search data saved:", search_form_data);
+
+    // Redirect to results page
+    window.top.location.href = "results.html";
+});
+</script>
+

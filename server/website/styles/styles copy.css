@@ -1,0 +1,533 @@
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #000;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	background-image: url(../pictures/tlo.jpeg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Rozstawienie elementów */
+    align-items: center; /* Wyrównanie w pionie */
+    padding: 10px 20px; /* Odstępy wewnętrzne (opcjonalnie) */
+    height: 60px; /* Opcjonalna wysokość nagłówka */
+    background-color: #f4f4f4; /* Kolor tła (opcjonalnie) */
+  }
+
+.copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date-time  {
+    margin-top: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.logo-container {
+    flex: 0; /* Element na lewej stronie */
+    width: 50%;
+}
+
+.logo-container img {
+    float: left;
+    width: 80px;
+    height: auto;
+}
+
+.site-name {
+    flex: 1; /* Centrum rozciąga się, aby być wyśrodkowane */
+    text-align: center;
+}
+
+
+.auth-panel-small  {   
+    flex: 0; /* Element na prawej stronie */
+    gap: 15px; /* Odstępy między elementami listy */
+    list-style: none; /* Usunięcie kropek w liście */
+    padding: 0;
+    margin: 0;
+}
+
+.auth-panel-small li {
+    margin-bottom: 10px; /* Opcjonalny odstęp między elementami */
+}
+  
+.auth-panel-small li:last-child {
+    margin-bottom: 0; /* Usunięcie odstępu dla ostatniego elementu */
+}
+
+.auth-panel-small a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 4.5px 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Przezroczyste tło */
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Płynne przejście na hover */
+}
+
+.auth-panel-small a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Cień przy najechaniu */
+    transform: translateY(-2px); /* Lekki efekt unoszenia */
+}
+
+
+
+/* menu z lewej */
+aside{
+    background-color: rgb(7, 28, 48);
+    color: #eeeeee;
+    width: 12%;
+    order: 1;
+    min-height: 100%; 
+}
+
+.menu {
+    list-style: none;
+    position: relative;
+    left: -20px; /* Przesunięcie listy w lewo */
+    text-align: center;
+}
+
+.menu li {
+    margin-bottom: 20px; /* Opcjonalny odstęp między elementami */
+}
+
+.menu a {
+
+    color: #d3cccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    background-color: rgb(18, 72, 126);
+    border-radius: 8px;
+}
+
+
+
+#page{
+    background-color: #fff;
+    margin: 0 auto ;
+    padding: 0;
+    min-width: 400px;
+    max-width: 1000px;
+    border-radius: 10px 10px 10px 10px;
+}
+body > #page > header {
+    margin-bottom: 0;
+    padding: 20px 15px; /* Większe marginesy wewnętrzne */
+    background: linear-gradient(45deg, #941d20, #5f1215); 
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0; /* Zaokrąglone górne rogi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Cień pod nagłówkiem */
+}
+body > #page > header > h1,
+body > #page > header > h2{
+    margin: 0;
+    font-variant: small-caps;
+}
+body > #page > header > h2{
+    font-size: 90%;
+    font-weight: normal;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    width: 88%;
+    order: 2;
+}
+
+
+body > #page > footer {
+    background-color: #222222;
+    color: #eeeeee;
+    padding: 15px;
+    font-size: 80%;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* Zaokrąglone dolne rogi */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Cień nad stopką */
+}
+article > section > header{
+    background-color: #718cd1;
+    color: #eeeeee;
+    padding: 2px 8px;
+    margin: 0;
+}
+article > section > p,
+article > section > footer{
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+article > section > footer{
+    border-top:  1px solid #dddddd;
+    border-bottom:  1px solid #dddddd;
+    font-size: 80%;
+}
+
+
+
+
+
+/* dev team */
+.kontener {
+    margin: 0 0px 100px 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.kontener img {
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.5s;
+}
+
+.kontener img:hover {
+    width: 25%;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+.cennik {
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Nagłówki tabeli */
+.cennik thead th {
+    background: linear-gradient(45deg, #941d20, #5f1215);
+    color: #fff;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Wiersze i komórki */
+.cennik tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Alternatywne wiersze */
+.cennik tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.cennik tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Efekt hover */
+.cennik tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Obramowanie nagłówków i tabeli */
+.cennik th,
+.cennik td {
+    border: 1px solid #ddd;
+}
+
+/* Dostosowanie tekstu */
+.cennik td:first-child {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .cennik {
+        font-size: 12px;
+    }
+    .cennik thead th,
+    .cennik tbody td {
+        padding: 8px;
+    }
+}
+th, td {
+    border: 1px solid #ccc; /* Obramowanie komórek */
+    padding: 10px; /* Odstęp wewnątrz komórek */
+  }
+  
+  /* Nagłówki tabeli */
+  th {
+    background-color: #f8f8f8; /* Jasne tło dla nagłówków */
+    font-weight: bold; /* Pogrubiona czcionka */
+  }
+  
+  .login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.form-input:focus {
+    border-color: #c0392b;
+    outline: none;
+}
+
+.form-radio {
+    margin-right: 10px;
+}
+
+.form-iframe {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #a93226;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
+ 
+ button{
+    background-color: rgb(7, 28, 48);
+    color: #f5f5f5;
+ }
+
+ .content {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.form-input:focus {
+    border-color: #c0392b;
+    outline: none;
+}
+
+.form-input:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.form-radio {
+    margin-right: 10px;
+}
+
+.form-radio-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-iframe {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #a93226;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
+
+.choseer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.choseer li {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.nav-link:active {
+    background-color: #a93226;
+}
+
+.nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .choseer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+}

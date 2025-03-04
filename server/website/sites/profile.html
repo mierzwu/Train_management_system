@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TMS - Profile</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles copy.css">
+    <script defer src="../scripts/profile.js"></script> <!-- Add profile script -->
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="logo-container">
+                <img src="../pictures/logo.png" alt="Logo">
+            </div>
+            <div class="site-name">
+                <h1>Train Management System</h1>
+            </div>
+            <ul class="auth-panel-small">
+                <li><a href="profile.html" class="profile-link">Profile</a></li>
+                <li><a href="#" class="logout-link">Logout</a></li>
+            </ul>
+        </header>
+        
+        <div class="container">
+            <main>
+                <section class="content">
+                    <div class="profile-container">
+                        <h2>Profile</h2>
+                        <button id="editProfileBtn">Edit Profile Info</button>
+                        <button id="travelHistoryBtn">Travel History</button>
+                        <button id="statisticsBtn" style="display: none;">Statistics</button> <!-- Button for admin -->
+                        <div id="profileContent" style="margin-top: 20px;"></div>
+                    </div>
+                </section>
+            </main>
+            <aside>
+                <ul class="menu">
+                    <li><a href="index.html">Search route</a></li>
+                    <li><a href="pricelist.html">Pricelist</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <div class="copyright">
+                © 2024 Train Management System. All rights reserved.
+            </div>
+            <div class="date-time">
+                <p id="currentDate"></p>
+                <p id="currentTime"></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

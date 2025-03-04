@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #969696;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Górna belka z datą, godziną oraz linkami do logowania i rejestracji */
+.top-bar-small {
+    background-color: #c0c0c0;
+    padding: 10px 20px;
+    text-align: right;
+    align-items: right;
+    border-bottom: 1px solid #818181;
+    font-size: 0.9em;
+}
+
+
+.auth-panel-small p {
+    margin-left: 150px;/* Usunięcie domyślnego marginesu */
+    text-align: center; /* Wyrównanie w środku */
+    flex: 1; /* Pozwala paragrafowi rozciągać się między elementami */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.auth-panel-small  {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    align-items: center;
+}
+
+.auth-panel-small a {
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    font-size: 1em;
+}
+
+.auth-panel-small a:hover {
+    text-decoration: none;
+    background-color: #c10003;
+    border-radius: 10px;
+}
+
+/* Sekcja logo i nawa wyśrodkowana */
+header {
+    text-align: center;
+}
+
+.logo-container img {
+    float: left;
+    margin-right: 10px;
+    width: 120px;
+    height: auto;
+    ;
+}
+
+/* Menu nawigacyjne */
+/*
+nav {
+    background-color: #d50000; /* Kolor z logo 
+}
+*/
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin-right: 120px;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+    display: block;
+}
+
+.menu li:hover > a {
+    background-color: #a30000;
+    border-radius: 5px;
+}
+
+/* Układ główny */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.search-container {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    color: #d50000;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+button {
+    padding: 15px;
+    background-color: #d50000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a30000;
+}
+
+.train-container {
+    position: fixed;
+    bottom: 50px; /* Odstęp od stopki */
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.train {
+    height: 70px; /* Dopasuj wysokość pociągu */
+    animation: trainMove 10s ease-in-out infinite;
+}
+
+@keyframes trainMove {
+    0% {
+        transform: translateX(-100%); /* Początek po lewej */
+        opacity: 1; 
+    }
+    70% {
+        transform: translateX(100vw); /* Przejazd na prawą stronę */
+        opacity: 1; 
+    }
+    100% {
+        transform: translateX(100vw); /* Pauza przy prawej krawędzi */
+        opacity: 1; 
+    }
+}
+
+.contact a {
+    padding: 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    font-size: 1em;
+}
+
+.contact a:hover {
+    text-decoration: none;
+    background-color: #c10003;
+    border-radius: 10px;
+}
+footer {
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-top: 2px solid #818181;
+}
+
+.copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date-time  {
+    margin-left: auto;
+    text-align: right;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+ /* Kontener na cały kolaż */
+ .photo-collage {
+    display: flex; /* Ustawia zdjęcia obok siebie */
+    justify-content: space-between; /* Odstęp między zdjęciami */
+    align-items: flex-start; /* Wyrównanie zdjęć w pionie */
+    flex-wrap: wrap; /* Pozwala na zawijanie zdjęć przy węższych ekranach */
+    gap: 10px; /* Odstępy między zdjęciami */
+    padding: 20px; /* Odstęp wewnętrzny kontenera */
+}
+
+/* Styl dla każdego zdjęcia z podpisem */
+.photo-item {
+    text-align: center; /* Wyśrodkowanie tekstu pod zdjęciem */
+    height: 232px;
+    object-fit: cover; /* Dopasowanie zdjęcia przy zachowaniu proporcji */
+    max-width: 15%; /* Każde zdjęcie zajmuje maksymalnie 18% szerokości */
+}
+
+/* Styl zdjęcia */
+.photo-item img {
+    width: 100%; /* Zdjęcie dopasowuje się do kontenera */
+    height: auto; /* Zachowuje proporcje */
+    display: block; /* Eliminuje odstęp pod zdjęciem */
+    border-radius: 8px; /* Zaokrąglone rogi (opcjonalnie) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodaje cień dla lepszego wyglądu */
+}
+
+/* Styl dla podpisów */
+.photo-item p {
+    margin: 10px 0 0; /* Odstęp między zdjęciem a podpisem */
+    font-size: 14px; /* Rozmiar tekstu */
+    color: #333; /* Kolor tekstu */
+    line-height: 1.2; /* Wysokość linii dla tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    word-wrap: break-word; /* Zapobiega wychodzeniu tekstu poza obszar */
+}
+
+/* dev team */
+.kontener {
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.kontener img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.5s;
+}
+
+.kontener img:hover {
+    width: 25%;
+}

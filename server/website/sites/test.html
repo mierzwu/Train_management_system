@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS - Wyszukiwarka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            font-size: 16px;
+        }
+        .login {
+            color: white;
+            background-color: red;
+            padding: 5px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .search-box {
+            background-color: #e0e0e0;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .search-box input {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-box button {
+            background-color: #fbbf00;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: white;
+            border-top: 1px solid #ccc;
+        }
+        .train {
+            margin: 30px auto;
+        }
+        .train img {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/40" alt="Logo">
+            <h1>TMS</h1>
+        </div>
+        <nav class="nav">
+            <a href="#">Cennik</a>
+            <a href="#">Rozkład</a>
+            <a href="#" class="login">Zaloguj się | Zarejestruj</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <form>
+                <label for="start">Stacja początkowa</label><br>
+                <input type="text" id="start" name="start"><br>
+                <label for="end">Stacja końcowa</label><br>
+                <input type="text" id="end" name="end"><br>
+                <label for="time">Godzina</label><br>
+                <input type="text" id="time" name="time"><br>
+                <button type="submit">Wyszukaj</button>
+            </form>
+        </div>
+        <div class="train">
+            <img src="https://via.placeholder.com/200x50" alt="Pociąg">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span>KONTAKT</span> | <span>DATA GODZINA</span>
+    </footer>
+</body>
+</html>

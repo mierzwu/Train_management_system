@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-image: url(../pictures/tlo.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Rozstawienie elementów */
+    align-items: center; /* Wyrównanie w pionie */
+    padding: 10px 20px; /* Odstępy wewnętrzne (opcjonalnie) */
+    height: 60px; /* Opcjonalna wysokość nagłówka */
+    background-color: #f4f4f4; /* Kolor tła (opcjonalnie) */
+    /* width: 100%; */ /* Ensure the header takes full width */
+    /* max-width: 820px; */ /* Match the width of the results table */
+    /* margin: 0 auto; */ /* Center align the header */
+}
+
+.copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date-time {
+    margin-top: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.logo-container {
+    flex: 0; /* Element na lewej stronie */
+    width: 50%;
+}
+
+.logo-container img {
+    float: left;
+    width: 80px;
+    height: auto;
+}
+
+.site-name {
+    flex: 1; /* Centrum rozciąga się, aby być wyśrodkowane */
+    text-align: center;
+}
+
+.auth-panel-small {
+    flex: 0; /* Element na prawej stronie */
+    gap: 15px; /* Odstępy między elementami listy */
+    list-style: none; /* Usunięcie kropek w liście */
+    padding: 0;
+    margin: 0;
+}
+
+.auth-panel-small li {
+    margin-bottom: 10px; /* Opcjonalny odstęp między elementami */
+}
+
+.auth-panel-small li:last-child {
+    margin-bottom: 0; /* Usunięcie odstępu dla ostatniego elementu */
+}
+
+.auth-panel-small a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 4.5px 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Przezroczyste tło */
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Płynne przejście na hover */
+}
+
+.auth-panel-small a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Cień przy najechaniu */
+    transform: translateY(-2px); /* Lekki efekt unoszenia */
+}
+
+/* menu z lewej */
+aside {
+    background-color: rgb(7, 28, 48);
+    color: #eeeeee;
+    width: 12%;
+    order: 1;
+    min-height: 100%;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.menu {
+    list-style: none;
+    position: relative;
+    left: -20px; /* Przesunięcie listy w lewo */
+    text-align: center;
+}
+
+.menu li {
+    margin-bottom: 20px; /* Opcjonalny odstęp między elementami */
+}
+
+.menu a {
+    color: #d3cccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    background-color: rgb(18, 72, 126);
+    border-radius: 8px;
+}
+
+#page {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 400px;
+    max-width: 1000px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+body > #page > header {
+    margin-bottom: 0;
+    padding: 20px 15px; /* Większe marginesy wewnętrzne */
+    background: linear-gradient(45deg, #941d20, #5f1215);
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0; /* Zaokrąglone górne rogi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Cień pod nagłówkiem */
+}
+
+body > #page > header > h1,
+body > #page > header > h2 {
+    margin: 0;
+    font-variant: small-caps;
+}
+
+body > #page > header > h2 {
+    font-size: 90%;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main {
+    width: 88%;
+    order: 2;
+}
+
+body > #page > footer {
+    background-color: #222222;
+    color: #eeeeee;
+    padding: 15px;
+    font-size: 80%;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* Zaokrąglone dolne rogi */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Cień nad stopką */
+}
+
+.results-container {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    max-width: 90%; /* Ensure the container does not exceed the viewport width */
+    padding: 20px; /* Add padding around the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: #fff; /* Set background color */
+    width: 100%; /* Ensure the container takes full width */
+    min-width: 820px; /* Set a minimum width for the container */
+    height: auto; /* Allow the container to grow with content */
+    min-height: 600px; /* Set a minimum height for the container */
+    margin-left: 0; /* Align the container to the left */
+    float: left; /* Align the container to the left */
+}
+
+#resultsTable {
+    table-layout: auto; /* Auto table layout */
+    width: 100%; /* Ensure the table takes full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-bottom: 20px; /* Add some space below the table */
+    font-size: 1em; /* Adjust font size for better readability */
+}
+
+#resultsTable th, #resultsTable td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 15px; /* Increase padding for table cells */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Break long words */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+#resultsTable th {
+    background-color: #f4f4f4; /* Light background for header */
+    font-weight: bold; /* Bold text for header */
+}
+
+#resultsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for even rows */
+}
+
+#resultsTable tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+#resultsTable td:last-child {
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center; /* Center align the content */
+}
+
+#resultsTable button {
+    padding: 10px 15px; /* Increase padding for buttons */
+    font-size: 1em; /* Adjust font size for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #c0392b; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#resultsTable button:hover {
+    background-color: #a93226; /* Darker background on hover */
+}

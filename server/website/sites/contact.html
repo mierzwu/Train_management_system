@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TMS</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles copy.css">
+    <script defer src="../script.js"></script> <!-- Dodanie skryptu JavaScript -->
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="logo-container">
+                <img src="../pictures/logo.png" alt="Logo">
+            </div>
+            <div class="site-name">
+                <h1>Train Menegement System</h1>
+            </div>
+			<ul class="auth-panel-small">      
+                <!-- The auth panel will be updated by JavaScript -->
+            </ul>
+        </header>
+        
+        <div class="container">
+            <main>
+                <div class="kontener">
+                <img src="../pictures/dzony.png">
+                <img src="../pictures/ruda.png">
+                <img src="../pictures/cypi.png">
+                <img src="../pictures/oliwia.png">
+                <img src="../pictures/szymi.png">
+            </div>
+                
+        
+            </main>
+            <aside>
+                <ul class="menu">
+                    <li><a href="index.html">Search route</a></li>
+                    <li><a href="pricelist.html">Pricelist</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <div class="copyright">
+                © 2024 Train Menegament System. All rights reserved.
+            </div>
+            <div class="date-time">
+                <p id="currentDate"></p>
+                <p id="currentTime"></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token');
+            const authPanel = document.querySelector('.auth-panel-small');
+            if (token) {
+                authPanel.innerHTML = `
+                    <li><a href="profile.html" class="profile-link">Profile</a></li>
+                    <li><a href="#" class="logout-link">Logout</a></li>
+                `;
+
+                document.querySelector('.logout-link').addEventListener('click', () => {
+                    localStorage.removeItem('token');
+                    window.location.href = "index.html";
+                });
+            } else {
+                authPanel.innerHTML = `
+                    <li><a href="login.html" class="login-link">Login</a></li>
+                    <li><a href="register.html" class="register-link">Register</a></li>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
